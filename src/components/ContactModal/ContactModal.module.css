@@ -43,8 +43,8 @@
 
 .closeModal {
 	position: absolute;
-	top: 6px;
-	right: 10px;
+	top: 4px;
+	right: 14px;
 	background: none;
 	border: none;
 	color: var(--muted);

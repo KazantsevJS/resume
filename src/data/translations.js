@@ -8,7 +8,7 @@ export const translations = {
 		contact: 'Связаться',
 		english: 'Английский',
 		'english-level': 'B1+ (Intermediate)',
-		company: 'Aston | Frontend-разработчик',
+		company: 'Astondevs',
 		period: '06.2024 – 09.2025',
 		'experience-description':
 			'Работа на проекте стороннего заказчика - внутренней логистической системы для управления поставками товаров в офисы банка.',
@@ -51,7 +51,7 @@ export const translations = {
 		contact: 'Contact me',
 		english: 'English',
 		'english-level': 'B1+ (Intermediate)',
-		company: 'Aston | Frontend Developer',
+		company: 'Astondevs',
 		period: '06.2024 – 09.2025',
 		'experience-description':
 			'Work on a third-party customer project - an internal logistics system for managing supplies of goods to bank offices.',
