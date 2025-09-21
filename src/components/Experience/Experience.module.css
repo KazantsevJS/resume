@@ -143,28 +143,28 @@
 	}
 
 	.experienceItem {
-		font-size: 13px;
+		font-size: 14px;
 	}
 
 	.company {
-		font-size: 15px;
+		font-size: 16px;
 	}
 
 	.period {
-		font-size: 12px;
+		font-size: 16px;
 	}
 
 	.description,
 	.description ul {
-		font-size: 13px;
+		font-size: 15px;
 	}
 
 	.projectStack {
-		font-size: 13px;
+		font-size: 14px;
 	}
 
 	.stackItem {
-		font-size: 11px;
+		font-size: 12px;
 		padding: 1px 4px;
 	}
 }
