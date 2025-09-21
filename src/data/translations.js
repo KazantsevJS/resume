@@ -9,7 +9,7 @@ export const translations = {
 		english: 'Английский',
 		'english-level': 'B1+ (Intermediate)',
 		company: 'Aston | Frontend-разработчик',
-		period: 'Июнь 2024 – Сентябрь 2025',
+		period: '06.2024 – 09.2025',
 		'experience-description':
 			'Работа на проекте стороннего заказчика - внутренней логистической системы для управления поставками товаров в офисы банка.',
 		'key-modules': 'Ключевые модули и мой вклад:',
@@ -30,7 +30,8 @@ export const translations = {
 			'Разработка функционала: создание 12+ переиспользуемых компонентов, адаптация элементов Material UI',
 		stack: 'Стек',
 		team: 'Команда',
-		'team-composition':
+		'team-composition': 'Состав команды',
+		'team-composition-details':
 			'2 Frontend-разработчика, 2 Backend-разработчика, 1 DevOps-инженер, 1 QA-инженер, 1 Project Manager, 1 UX/UI-дизайнер',
 		'education-place': 'Академия гражданской защиты (бакалавр)',
 		'education-specialty-ru': 'Информационные системы и технологии',
@@ -51,7 +52,7 @@ export const translations = {
 		english: 'English',
 		'english-level': 'B1+ (Intermediate)',
 		company: 'Aston | Frontend Developer',
-		period: 'June 2024 – September 2025',
+		period: '06.2024 – 09.2025',
 		'experience-description':
 			'Work on a third-party customer project - an internal logistics system for managing supplies of goods to bank offices.',
 		'key-modules': 'Key modules and my contribution:',
@@ -72,7 +73,8 @@ export const translations = {
 			'Functionality development: created 12+ reusable components, adapted Material UI elements',
 		stack: 'Stack',
 		team: 'Team',
-		'team-composition':
+		'team-composition': 'Team composition',
+		'team-composition-details':
 			'2 Frontend developers, 2 Backend developers, 1 DevOps engineer, 1 QA engineer, 1 Project Manager, 1 UX/UI designer',
 		'education-place': 'Civil Defence Academy',
 		'education-specialty-en': 'Bachelor of Science in Information Systems',

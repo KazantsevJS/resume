@@ -11,7 +11,7 @@
 	border: 1px solid var(--border-color);
 	border-radius: 14px;
 	padding: 16px;
-	transition: 150ms ease;
+	transition: all 150ms ease;
 	height: 100%;
 	display: flex;
 	flex-direction: column;
@@ -31,7 +31,7 @@
 }
 
 .experienceItem {
-	font-size: 18px;
+	font-size: 16px;
 	line-height: 1.4;
 }
 
@@ -51,7 +51,7 @@
 
 .period {
 	color: var(--accent);
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 500;
 	margin: 0;
 }
@@ -110,6 +110,14 @@
 .projectStack strong {
 	color: var(--text);
 	font-weight: 600;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.stackItems {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
 }
 
 .stackItem {
@@ -118,8 +126,36 @@
 	color: var(--accent);
 	padding: 2px 6px;
 	border-radius: 4px;
-	margin: 2px;
-	font-size: 14px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.teamSection {
+	color: var(--muted);
+	font-size: 18px;
+	margin: 8px 0 0 0;
+}
+
+.teamSection strong {
+	color: var(--text);
+	font-weight: 600;
+}
+
+.teamComposition {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-top: 4px;
+}
+
+.teamMember {
+	display: inline-block;
+	white-space: nowrap;
+	background: var(--skill-bg);
+	color: var(--accent);
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 16px;
 	font-weight: 500;
 }
 
@@ -160,11 +196,28 @@
 	}
 
 	.projectStack {
-		font-size: 16px;
+		font-size: 14px;
+	}
+
+	.stackItems {
+		gap: 3px;
 	}
 
 	.stackItem {
 		font-size: 14px;
 		padding: 1px 4px;
+	}
+
+	.teamSection {
+		font-size: 14px;
+	}
+
+	.teamMember {
+		font-size: 14px;
+		padding: 1px 4px;
+	}
+
+	.teamComposition {
+		gap: 4px;
 	}
 }
