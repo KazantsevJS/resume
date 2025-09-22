@@ -2,7 +2,6 @@ import { translations } from '../../data/translations'
 import styles from './Experience.module.css'
 
 const Experience = ({ language }) => {
-	// Определяем состав команды в зависимости от языка
 	const teamMembers =
 		language === 'ru'
 			? [
@@ -24,13 +23,13 @@ const Experience = ({ language }) => {
 
 	return (
 		<section id='experience' className={styles.section}>
-			<h3 className={styles.sectionTitle}>
+			<h3 className={styles.section__title}>
 				{translations[language].experience}
 			</h3>
 			<div className={styles.card}>
-				<div className={styles.cardContent}>
-					<div className={styles.experienceItem}>
-						<div className={styles.companyRow}>
+				<div className={styles.card__content}>
+					<div className={styles.experience__item}>
+						<div className={styles.company__row}>
 							<h4 className={styles.company}>
 								{translations[language].company}
 							</h4>
@@ -75,7 +74,7 @@ const Experience = ({ language }) => {
 							</ul>
 						</div>
 
-						<div className={styles.projectStack}>
+						<div className={styles.project__stack}>
 							<strong>{translations[language].stack}: </strong>
 							<div className={styles.stackItems}>
 								<span className={styles.stackItem}>React 18</span>
@@ -88,11 +87,11 @@ const Experience = ({ language }) => {
 							</div>
 						</div>
 
-						<div className={styles.teamSection}>
+						<div className={styles.team__section}>
 							<strong>{translations[language].team}: </strong>
-							<div className={styles.teamComposition}>
+							<div className={styles.team__composition}>
 								{teamMembers.map((member, index) => (
-									<span key={index} className={styles.teamMember}>
+									<span key={index} className={styles.team__member}>
 										{member}
 									</span>
 								))}

@@ -23,23 +23,24 @@
 	box-shadow: var(--shadow), 0 0 0 6px var(--ring);
 }
 
-.cardContent {
+.card__content {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
 }
 
-.experienceItem {
+.experience__item {
 	font-size: 16px;
 	line-height: 1.4;
 }
 
-.companyRow {
+.company__row {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 8px;
+	gap: 16px;
 }
 
 .company {
@@ -47,6 +48,7 @@
 	font-size: 20px;
 	color: var(--text);
 	margin: 0;
+	flex-shrink: 0;
 }
 
 .period {
@@ -54,6 +56,8 @@
 	font-size: 20px;
 	font-weight: 500;
 	margin: 0;
+	white-space: nowrap;
+	flex-shrink: 0;
 }
 
 .description {
@@ -97,17 +101,17 @@
 	font-weight: 600;
 }
 
-.projectStack {
+.project__stack {
 	color: var(--muted);
 	font-size: 18px;
 	margin: 8px 0 0 0;
 }
 
-.projectStack:last-child {
+.project__stack:last-child {
 	margin-bottom: 0;
 }
 
-.projectStack strong {
+.project__stack strong {
 	color: var(--text);
 	font-weight: 600;
 	display: block;
@@ -130,25 +134,25 @@
 	font-weight: 500;
 }
 
-.teamSection {
+.team__section {
 	color: var(--muted);
 	font-size: 18px;
 	margin: 8px 0 0 0;
 }
 
-.teamSection strong {
+.team__section strong {
 	color: var(--text);
 	font-weight: 600;
 }
 
-.teamComposition {
+.team__composition {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 6px;
 	margin-top: 4px;
 }
 
-.teamMember {
+.team__member {
 	display: inline-block;
 	white-space: nowrap;
 	background: var(--skill-bg);
@@ -172,21 +176,23 @@
 		flex: none;
 	}
 
-	.companyRow {
-		flex-direction: column;
-		align-items: flex-start;
-		gap: 4px;
-	}
-
-	.experienceItem {
-		font-size: 16px;
+	.company__row {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 8px;
 	}
 
 	.company {
-		font-size: 16px;
+		font-size: 18px;
+		flex-shrink: 1;
 	}
 
 	.period {
+		font-size: 16px;
+	}
+
+	.experience__item {
 		font-size: 16px;
 	}
 
@@ -195,7 +201,7 @@
 		font-size: 16px;
 	}
 
-	.projectStack {
+	.project__stack {
 		font-size: 14px;
 	}
 
@@ -208,16 +214,40 @@
 		padding: 1px 4px;
 	}
 
-	.teamSection {
+	.team__section {
 		font-size: 14px;
 	}
 
-	.teamMember {
+	.team__member {
 		font-size: 14px;
 		padding: 1px 4px;
 	}
 
-	.teamComposition {
+	.team__composition {
 		gap: 4px;
+	}
+}
+
+@media (max-width: 480px) {
+	.company__row {
+		flex-wrap: nowrap;
+	}
+
+	.company {
+		font-size: 16px;
+	}
+
+	.period {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 360px) {
+	.company {
+		font-size: 15px;
+	}
+
+	.period {
+		font-size: 13px;
 	}
 }

@@ -4,7 +4,7 @@ const ContactModal = ({ isOpen, onClose }) => {
 	if (!isOpen) return null
 
 	return (
-		<div className={styles.modal} onClick={onClose}>
+		<div className={`${styles.modal} no-print`} onClick={onClose}>
 			<div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
 				<button className={styles.closeModal} onClick={onClose}>
 					&times;

@@ -1,17 +1,32 @@
 import { translations } from '../../data/translations'
 import styles from './Hero.module.css'
 
-const Hero = ({ language, openModal }) => {
+const Hero = ({ language, openModal, handlePrint }) => {
 	return (
-		<div className={styles.content}>
-			<h1 className={styles.name}>{translations[language].name}</h1>
-			<h2 className={styles.title}>{translations[language].title}</h2>
+		<div className={`${styles.content} no-print`}>
+			<div className={styles.printHeader}>
+				<h1 className={styles.name}>{translations[language].name}</h1>
+				<h2 className={styles.title}>{translations[language].title}</h2>
+			</div>
+
 			<div className={styles.buttonsWrapper}>
 				<button
 					className={`${styles.btn} ${styles.btnPrimary}`}
 					onClick={openModal}
 				>
 					{translations[language].contact}
+				</button>
+				<button
+					className={`${styles.btn} ${styles.btnGhost}`}
+					onClick={() => {
+						if (handlePrint) {
+							handlePrint()
+						} else {
+							console.error('handlePrint function is not available')
+						}
+					}}
+				>
+					{translations[language].print}
 				</button>
 				<a
 					href='https://github.com/KazantsevJS'

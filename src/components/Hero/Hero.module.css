@@ -13,6 +13,7 @@
 .btn {
 	display: inline-flex;
 	align-items: center;
+	justify-content: center;
 	gap: 0.5rem;
 	font-weight: 600;
 	text-decoration: none;
@@ -22,6 +23,8 @@
 	cursor: pointer;
 	transition: all 0.2s ease;
 	white-space: nowrap;
+	min-height: 40px;
+	height: auto;
 }
 
 .btnGhost {
@@ -47,6 +50,10 @@
 	transform: translateY(-1px);
 }
 
+.printHeader {
+	display: none;
+}
+
 @media (max-width: 768px) {
 	.buttonsWrapper {
 		flex-direction: row;
@@ -56,7 +63,34 @@
 	}
 
 	.btn {
-		padding: 8px 12px;
+		padding: 10px 14px;
 		font-size: 14px;
+		flex: 1;
+		min-width: 120px;
+		min-height: 38px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		line-height: 1.2;
+	}
+}
+
+/* Стили для печати */
+@media print {
+	.printHeader {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	.printHeader .name {
+		font-size: 24pt !important;
+		color: var(--white) !important;
+		margin-bottom: 5px !important;
+	}
+
+	.printHeader .title {
+		font-size: 14pt !important;
+		color: var(--muted) !important;
+		margin: 0 !important;
 	}
 }
