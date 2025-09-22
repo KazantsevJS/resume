@@ -1,5 +1,4 @@
 :root {
-	/* Основные цвета */
 	--bg: #070f14;
 	--bg-2: #0b1620;
 	--card: #0f1f2a;
@@ -51,7 +50,6 @@
 	box-sizing: border-box;
 }
 
-/* Ссылки */
 a,
 a:link,
 a:visited {
@@ -62,7 +60,27 @@ a:hover {
 	text-decoration: none;
 }
 
-/* Основное */
+button,
+a,
+.btn,
+.navLink,
+.langBtn,
+.closeModal {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea {
+	-webkit-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
+}
+
 aside,
 nav,
 footer,
@@ -252,7 +270,6 @@ h3 {
 	height: 100%;
 }
 
-/* Универсальные стили для кнопок */
 .btn {
 	display: inline-flex;
 	align-items: center;
@@ -311,7 +328,6 @@ h3 {
 	}
 }
 
-/* Стили для печати */
 @media print {
 	.no-print {
 		display: none !important;

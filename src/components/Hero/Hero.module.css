@@ -75,7 +75,6 @@
 	}
 }
 
-/* Стили для печати */
 @media print {
 	.printHeader {
 		display: block;
