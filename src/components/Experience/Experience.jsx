@@ -2,6 +2,8 @@ import { translations } from '../../data/translations'
 import styles from './Experience.module.css'
 
 const Experience = ({ language }) => {
+	const t = translations[language]
+
 	const teamMembersOld =
 		language === 'ru'
 			? [
@@ -26,159 +28,158 @@ const Experience = ({ language }) => {
 			? ['3 Fullstack-разработчика', '1 Project Lead', '1 HR-менеджер']
 			: ['3 Fullstack developers', '1 Project Lead', '1 HR manager']
 
+	const ExperienceCard = ({
+		company,
+		period,
+		role,
+		description,
+		keyModules,
+		modules,
+		achievements,
+		achievementItems,
+		stack,
+		stackItems,
+		team,
+		teamMembers,
+		showAchievements = true,
+	}) => (
+		<div className={styles.card}>
+			<div className={styles.card__content}>
+				<div className={styles.experience__item}>
+					<div className={styles.company__row}>
+						<h4 className={styles.company}>{company}</h4>
+						<span className={styles.period}>{period}</span>
+					</div>
+
+					<div className={styles.role}>{role}</div>
+
+					<div className={styles.description}>
+						<p>{description}</p>
+
+						<div className={styles.divider}></div>
+
+						<p>
+							<strong>{keyModules}</strong>
+						</p>
+						<ul>
+							{modules.map((module, index) => (
+								<li key={index}>{module}</li>
+							))}
+						</ul>
+
+						{showAchievements &&
+							achievementItems &&
+							achievementItems.length > 0 && (
+								<>
+									<div className={styles.divider}></div>
+									<p>
+										<strong>{achievements}</strong>
+									</p>
+									<ul>
+										{achievementItems.map((achievement, index) => (
+											<li key={index}>{achievement}</li>
+										))}
+									</ul>
+								</>
+							)}
+					</div>
+
+					<div className={styles.project__stack}>
+						<strong>{stack}: </strong>
+						<div className={styles.stackItems}>
+							{stackItems.map((item, index) => (
+								<span key={index} className={styles.stackItem}>
+									{item}
+								</span>
+							))}
+						</div>
+					</div>
+
+					<div className={styles.team__section}>
+						<strong>{team}: </strong>
+						<div className={styles.team__composition}>
+							{teamMembers.map((member, index) => (
+								<span key={index} className={styles.team__member}>
+									{member}
+								</span>
+							))}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	)
+
 	return (
 		<section id='experience' className={styles.section}>
-			<h3 className={styles.section__title}>
-				{translations[language].experience}
-			</h3>
+			<h3 className={styles.section__title}>{t.experience}</h3>
 
-			{/* Новый опыт - TechFlow Solutions (стартап) */}
-			<div className={styles.card}>
-				<div className={styles.card__content}>
-					<div className={styles.experience__item}>
-						<div className={styles.company__row}>
-							<h4 className={styles.company}>
-								{translations[language]['company-new']}
-							</h4>
-							<span className={styles.period}>
-								{translations[language]['period-new']}
-							</span>
-						</div>
-
-						<div className={styles.role}>
-							{translations[language]['role-new']}
-						</div>
-
-						<div className={styles.description}>
-							<p>{translations[language]['experience-description-new']}</p>
-
-							<div className={styles.divider}></div>
-
-							<p>
-								<strong>{translations[language]['key-modules-new']}</strong>
-							</p>
-							<ul>
-								<li>{translations[language]['module-1']}</li>
-								<li>{translations[language]['module-2']}</li>
-								<li>{translations[language]['module-3']}</li>
-							</ul>
-
-							<div className={styles.divider}></div>
-
-							<p>
-								<strong>{translations[language]['achievements-new']}</strong>
-							</p>
-							<ul>
-								<li>{translations[language]['achievement-new-1']}</li>
-								<li>{translations[language]['achievement-new-2']}</li>
-								<li>{translations[language]['achievement-new-3']}</li>
-								<li>{translations[language]['achievement-new-4']}</li>
-							</ul>
-						</div>
-
-						<div className={styles.project__stack}>
-							<strong>{translations[language]['stack-new']}: </strong>
-							<div className={styles.stackItems}>
-								<span className={styles.stackItem}>Next.js 15</span>
-								<span className={styles.stackItem}>TypeScript</span>
-								<span className={styles.stackItem}>NestJS</span>
-								<span className={styles.stackItem}>PostgreSQL</span>
-								<span className={styles.stackItem}>Prisma</span>
-								<span className={styles.stackItem}>Docker</span>
-							</div>
-						</div>
-
-						<div className={styles.team__section}>
-							<strong>{translations[language]['team-new']}: </strong>
-							<div className={styles.team__composition}>
-								{teamMembersNew.map((member, index) => (
-									<span key={index} className={styles.team__member}>
-										{member}
-									</span>
-								))}
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			{/* Новый опыт - No-name (стартап) */}
+			<ExperienceCard
+				company={t['company-new']}
+				period={t['period-new']}
+				role={t['role-new']}
+				description={t['experience-description-new']}
+				keyModules={t['key-modules-new']}
+				modules={[t['module-1'], t['module-2'], t['module-3']]}
+				achievements={t.achievements}
+				achievementItems={[]}
+				stack={t['stack-new']}
+				stackItems={[
+					'Next.js 15',
+					'TypeScript',
+					'NestJS',
+					'PostgreSQL',
+					'Prisma',
+					'Docker',
+				]}
+				team={t['team-new']}
+				teamMembers={teamMembersNew}
+				showAchievements={false}
+			/>
 
 			{/* Старый опыт - Astondevs */}
-			<div className={styles.card}>
-				<div className={styles.card__content}>
-					<div className={styles.experience__item}>
-						<div className={styles.company__row}>
-							<h4 className={styles.company}>
-								{translations[language].company}
-							</h4>
-							<span className={styles.period}>
-								{translations[language].period}
-							</span>
-						</div>
-
-						<div className={styles.role}>{translations[language].role}</div>
-
-						<div className={styles.description}>
-							<p>{translations[language]['experience-description']}</p>
-
-							<div className={styles.divider}></div>
-
-							<p>
-								<strong>{translations[language]['key-modules']}</strong>
-							</p>
-							<ul>
-								<li>
-									<strong>Radar</strong>
-									<span> {translations[language]['radar-desc']}</span>
-								</li>
-								<li>
-									<strong>Market</strong>
-									<span> {translations[language]['market-desc']}</span>
-								</li>
-								<li>
-									<strong>CLIK</strong>
-									<span> {translations[language]['clik-desc']}</span>
-								</li>
-							</ul>
-
-							<div className={styles.divider}></div>
-
-							<p>
-								<strong>{translations[language].achievements}</strong>
-							</p>
-							<ul>
-								<li>{translations[language]['achievement-1']}</li>
-								<li>{translations[language]['achievement-2']}</li>
-								<li>{translations[language]['achievement-3']}</li>
-								<li>{translations[language]['achievement-4']}</li>
-							</ul>
-						</div>
-
-						<div className={styles.project__stack}>
-							<strong>{translations[language].stack}: </strong>
-							<div className={styles.stackItems}>
-								<span className={styles.stackItem}>React 18</span>
-								<span className={styles.stackItem}>TypeScript</span>
-								<span className={styles.stackItem}>Redux Toolkit</span>
-								<span className={styles.stackItem}>Axios</span>
-								<span className={styles.stackItem}>Material UI</span>
-								<span className={styles.stackItem}>Vite</span>
-								<span className={styles.stackItem}>REST API</span>
-							</div>
-						</div>
-
-						<div className={styles.team__section}>
-							<strong>{translations[language].team}: </strong>
-							<div className={styles.team__composition}>
-								{teamMembersOld.map((member, index) => (
-									<span key={index} className={styles.team__member}>
-										{member}
-									</span>
-								))}
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+			<ExperienceCard
+				company={t.company}
+				period={t.period}
+				role={t.role}
+				description={t['experience-description']}
+				keyModules={t['key-modules']}
+				modules={[
+					<>
+						<strong>Radar</strong>
+						<span> {t['radar-desc']}</span>
+					</>,
+					<>
+						<strong>Market</strong>
+						<span> {t['market-desc']}</span>
+					</>,
+					<>
+						<strong>CLIK</strong>
+						<span> {t['clik-desc']}</span>
+					</>,
+				]}
+				achievements={t.achievements}
+				achievementItems={[
+					t['achievement-1'],
+					t['achievement-2'],
+					t['achievement-3'],
+					t['achievement-4'],
+				]}
+				stack={t.stack}
+				stackItems={[
+					'React 18',
+					'TypeScript',
+					'Redux Toolkit',
+					'Axios',
+					'Material UI',
+					'Vite',
+					'REST API',
+				]}
+				team={t.team}
+				teamMembers={teamMembersOld}
+				showAchievements={true}
+			/>
 		</section>
 	)
 }
