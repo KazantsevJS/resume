@@ -21,25 +21,34 @@ const LeftColumn = ({ language }) => {
 				<div className={styles.card}>
 					<div className={styles.cardContent}>
 						<div className={styles.skills}>
-							<span className={styles.skill}>Next.js</span>
+							{/* Frontend Technologies */}
+							<span className={styles.skill}>Next.js 15</span>
 							<span className={styles.skill}>React</span>
-							<span className={styles.skill}>Redux Toolkit</span>
-							<span className={styles.skill}>React Query</span>
-							<span className={styles.skill}>Zustand</span>
 							<span className={styles.skill}>TypeScript</span>
 							<span className={styles.skill}>JavaScript (ES6+)</span>
-							<span className={styles.skill}>REST API</span>
+							<span className={styles.skill}>Tailwind CSS</span>
+							<span className={styles.skill}>Redux Toolkit</span>
+							<span className={styles.skill}>React Hook Form</span>
+							<span className={styles.skill}>Zod</span>
 							<span className={styles.skill}>Axios</span>
+							<span className={styles.skill}>Material UI</span>
+							<span className={styles.skill}>Vite</span>
+
+							{/* Backend Technologies */}
+							<span className={styles.skill}>NestJS</span>
+							<span className={styles.skill}>Node.js</span>
+							<span className={styles.skill}>PostgreSQL</span>
+							<span className={styles.skill}>Prisma</span>
+							<span className={styles.skill}>JWT</span>
+							<span className={styles.skill}>Docker</span>
+
+							{/* General Technologies */}
+							<span className={styles.skill}>REST API</span>
 							<span className={styles.skill}>HTML5</span>
 							<span className={styles.skill}>CSS3/SCSS</span>
-							<span className={styles.skill}>Vite</span>
-							<span className={styles.skill}>Webpack</span>
-							<span className={styles.skill}>Tailwind CSS</span>
-							<span className={styles.skill}>Material-UI</span>
 							<span className={styles.skill}>Git</span>
 							<span className={styles.skill}>Figma</span>
 							<span className={styles.skill}>Agile/Scrum</span>
-							<span className={styles.skill}>Node.js</span>
 						</div>
 					</div>
 				</div>

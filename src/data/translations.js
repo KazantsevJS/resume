@@ -9,8 +9,27 @@ export const translations = {
 		print: 'Скачать PDF',
 		english: 'Английский',
 		'english-level': 'B1+ (Intermediate)',
+
+		// Новый опыт (стартап)
+		'company-new': 'No-name',
+		'period-new': '09.2025 – настоящее время',
+		'role-new': 'Fullstack Developer (Next.js/Nest.js)',
+		'experience-description-new':
+			'Разработка полнофункциональной HR-системы для управления процессом найма с нуля в HR-tech стартапе.',
+		'key-modules-new': 'Ключевые направления:',
+		'module-1':
+			'Candidate Management: система управления кандидатами с расширенной фильтрацией',
+		'module-2':
+			'Interview Scheduler: календарь собеседований с автоматическим назначением',
+		'module-3':
+			'Authentication System: JWT-аутентификация с ролевой моделью доступа',
+		'stack-new': 'Стек',
+		'team-new': 'Команда',
+
+		// Старый опыт (Astondevs)
 		company: 'Astondevs',
 		period: '06.2024 – 09.2025',
+		role: 'Frontend Developer (React)',
 		'experience-description':
 			'Работа на проекте стороннего заказчика - внутренней логистической системы для управления поставками товаров в офисы банка.',
 		'key-modules': 'Ключевые модули и мой вклад:',
@@ -31,17 +50,15 @@ export const translations = {
 			'Разработка функционала: создание 12+ переиспользуемых компонентов, адаптация элементов Material UI',
 		stack: 'Стек',
 		team: 'Команда',
-		'team-composition': 'Состав команды',
-		'team-composition-details':
-			'2 Frontend-разработчика, 2 Backend-разработчика, 1 DevOps-инженер, 1 QA-инженер, 1 Project Manager, 1 UX/UI-дизайнер',
+
 		'education-place': 'Академия гражданской защиты (бакалавр)',
 		'education-specialty-ru': 'Информационные системы и технологии',
 		'education-specialty-en': 'Bachelor of Science in Information Systems',
 		name: 'Александр Казанцев',
-		title: 'Frontend разработчик (React)',
-		'specialization-strong': 'Frontend-разработчик',
+		title: 'Fullstack Developer (Next.js/Nest.js)',
+		'specialization-strong': 'Fullstack-разработчик',
 		'specialization-text':
-			', специализируюсь на создании современных веб-приложений на React и Next.js. Нацелен на результат, пишу качественный код, эффективно работаю в команде.',
+			', специализируюсь на фронтенд-разработке с использованием React и Next.js. Имею опыт бэкенд-разработки на Nest.js, что позволяет эффективно работать в fullstack-проектах. Нацелен на результат, пишу качественный код, эффективно работаю в команде.',
 	},
 	en: {
 		home: 'Home',
@@ -53,8 +70,27 @@ export const translations = {
 		print: 'Download PDF',
 		english: 'English',
 		'english-level': 'B1+ (Intermediate)',
+
+		// New experience (startup)
+		'company-new': 'No-name',
+		'period-new': '09.2025 – Present',
+		'role-new': 'Fullstack Developer (Next.js/Nest.js)',
+		'experience-description-new':
+			'Development of a full-featured HR system for managing the hiring process from scratch in an HR-tech startup.',
+		'key-modules-new': 'Key areas:',
+		'module-1':
+			'Candidate Management: candidate management system with advanced filtering',
+		'module-2':
+			'Interview Scheduler: interview calendar with automatic assignment',
+		'module-3':
+			'Authentication System: JWT authentication with role-based access control',
+		'stack-new': 'Stack',
+		'team-new': 'Team',
+
+		// Old experience
 		company: 'Astondevs',
 		period: '06.2024 – 09.2025',
+		role: 'Frontend Developer (React)',
 		'experience-description':
 			'Work on a third-party customer project - an internal logistics system for managing supplies of goods to bank offices.',
 		'key-modules': 'Key modules and my contribution:',
@@ -75,15 +111,13 @@ export const translations = {
 			'Functionality development: created 12+ reusable components, adapted Material UI elements',
 		stack: 'Stack',
 		team: 'Team',
-		'team-composition': 'Team composition',
-		'team-composition-details':
-			'2 Frontend developers, 2 Backend developers, 1 DevOps engineer, 1 QA engineer, 1 Project Manager, 1 UX/UI designer',
+
 		'education-place': 'Civil Defence Academy',
 		'education-specialty-en': 'Bachelor of Science in Information Systems',
 		name: 'Alexander Kazantsev',
-		title: 'Frontend Developer (React)',
-		'specialization-strong': 'Frontend Developer',
+		title: 'Fullstack Developer (Next.js/Nest.js)',
+		'specialization-strong': 'Fullstack Developer',
 		'specialization-text':
-			', specializing in creating modern web applications with React and Next.js. Result-oriented, I write high-quality code and work effectively in a team.',
+			', specializing in frontend development with React and Next.js. Have backend development experience with Nest.js, which allows me to work effectively on fullstack projects. Result-oriented, I write high-quality code and work effectively in a team.',
 	},
 }
