@@ -1,7 +1,22 @@
+import React from 'react'
 import { translations } from '../../data/translations'
 import styles from './Hero.module.css'
 
-const Hero = ({ language, openModal, handlePrint }) => {
+interface HeroProps {
+	language: 'ru' | 'en'
+	openModal: () => void
+	handlePrint?: () => void
+}
+
+const Hero: React.FC<HeroProps> = ({ language, openModal, handlePrint }) => {
+	const handlePrintClick = (): void => {
+		if (handlePrint) {
+			handlePrint()
+		} else {
+			console.error('handlePrint function is not available')
+		}
+	}
+
 	return (
 		<div className={`${styles.content} no-print`}>
 			<div className={styles.printHeader}>
@@ -18,13 +33,7 @@ const Hero = ({ language, openModal, handlePrint }) => {
 				</button>
 				<button
 					className={`${styles.btn} ${styles.btnGhost}`}
-					onClick={() => {
-						if (handlePrint) {
-							handlePrint()
-						} else {
-							console.error('handlePrint function is not available')
-						}
-					}}
+					onClick={handlePrintClick}
 				>
 					{translations[language].print}
 				</button>

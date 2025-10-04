@@ -1,22 +1,28 @@
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { translations } from '../../data/translations'
 import styles from './Nav.module.css'
 
-const Nav = ({ language, switchLanguage }) => {
+interface NavProps {
+	language: 'ru' | 'en'
+	switchLanguage: (lang: 'ru' | 'en') => void
+}
+
+const Nav: React.FC<NavProps> = ({ language, switchLanguage }) => {
 	useEffect(() => {
-		const handleClick = (e) => {
-			if (e.target.matches('a[href^="#"]')) {
+		const handleClick = (e: MouseEvent): void => {
+			const target = e.target as HTMLElement
+			if (target.matches('a[href^="#"]')) {
 				e.preventDefault()
-				const targetId = e.target.getAttribute('href')
+				const targetId = target.getAttribute('href')
 
 				if (targetId === '#') {
 					window.scrollTo({ top: 0, behavior: 'smooth' })
 					return
 				}
 
-				const target = document.querySelector(targetId)
-				if (target) {
-					const offsetTop = target.offsetTop - 100
+				const targetElement = document.querySelector(targetId!) as HTMLElement
+				if (targetElement) {
+					const offsetTop = targetElement.offsetTop - 100
 					window.scrollTo({ top: offsetTop, behavior: 'smooth' })
 				}
 			}

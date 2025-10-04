@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { useReactToPrint } from 'react-to-print'
 import ContactModal from './components/ContactModal/ContactModal'
 import Experience from './components/Experience/Experience'
@@ -8,29 +8,34 @@ import Nav from './components/Nav/Nav'
 import { translations } from './data/translations'
 import './index.css'
 
-function App() {
-	const [language, setLanguage] = useState('ru')
-	const [isModalOpen, setIsModalOpen] = useState(false)
+type Language = 'ru' | 'en'
 
-	const printRef = useRef()
+const App: React.FC = () => {
+	const [language, setLanguage] = useState<Language>('ru')
+	const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
 
-	const switchLanguage = (lang) => {
+	const printRef = useRef<HTMLDivElement>(null)
+
+	const switchLanguage = (lang: Language): void => {
 		setLanguage(lang)
 	}
 
-	const openModal = () => {
+	const openModal = (): void => {
 		setIsModalOpen(true)
 	}
 
-	const closeModal = () => {
+	const closeModal = (): void => {
 		setIsModalOpen(false)
 	}
 
 	const handlePrint = useReactToPrint({
 		contentRef: printRef,
 		documentTitle: `${translations[language].name}_Resume`,
-		onAfterPrint: () => console.log('PDF успешно сохранен!'),
-		onPrintError: (error) => console.error('Ошибка печати:', error),
+		onAfterPrint: (): void => console.log('PDF успешно сохранен!'),
+		onPrintError: (
+			_errorLocation: 'onBeforePrint' | 'print',
+			error: Error
+		): void => console.error('Ошибка печати:', error),
 	})
 
 	return (

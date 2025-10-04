@@ -1,10 +1,31 @@
+import React from 'react'
 import { translations } from '../../data/translations'
 import styles from './Experience.module.css'
 
-const Experience = ({ language }) => {
+interface ExperienceProps {
+	language: 'ru' | 'en'
+}
+
+interface ExperienceCardProps {
+	company: string
+	period: string
+	role: string
+	description: string
+	keyModules: string
+	modules: (string | React.ReactElement)[]
+	achievements: string
+	achievementItems: string[]
+	stack: string
+	stackItems: string[]
+	team: string
+	teamMembers: string[]
+	showAchievements?: boolean
+}
+
+const Experience: React.FC<ExperienceProps> = ({ language }) => {
 	const t = translations[language]
 
-	const teamMembersOld =
+	const teamMembersOld: string[] =
 		language === 'ru'
 			? [
 					'2 Frontend-разработчика',
@@ -23,12 +44,12 @@ const Experience = ({ language }) => {
 					'1 Project Manager',
 			  ]
 
-	const teamMembersNew =
+	const teamMembersNew: string[] =
 		language === 'ru'
 			? ['3 Fullstack-разработчика', '1 Project Lead', '1 HR-менеджер']
 			: ['3 Fullstack developers', '1 Project Lead', '1 HR manager']
 
-	const ExperienceCard = ({
+	const ExperienceCard: React.FC<ExperienceCardProps> = ({
 		company,
 		period,
 		role,

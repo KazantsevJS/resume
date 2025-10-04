@@ -1,7 +1,12 @@
+import React from 'react'
 import { translations } from '../../data/translations'
 import styles from './LeftColumn.module.css'
 
-const LeftColumn = ({ language }) => {
+interface LeftColumnProps {
+	language: 'ru' | 'en'
+}
+
+const LeftColumn: React.FC<LeftColumnProps> = ({ language }) => {
 	return (
 		<div className={styles.leftColumn}>
 			<section id='about' className={styles.section}>

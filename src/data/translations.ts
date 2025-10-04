@@ -1,4 +1,48 @@
-export const translations = {
+interface TranslationKeys {
+	home: string
+	about: string
+	skills: string
+	experience: string
+	education: string
+	contact: string
+	print: string
+	english: string
+	'english-level': string
+	'company-new': string
+	'period-new': string
+	'role-new': string
+	'experience-description-new': string
+	'key-modules-new': string
+	'module-1': string
+	'module-2': string
+	'module-3': string
+	'stack-new': string
+	'team-new': string
+	company: string
+	period: string
+	role: string
+	'experience-description': string
+	'key-modules': string
+	'radar-desc': string
+	'market-desc': string
+	'clik-desc': string
+	achievements: string
+	'achievement-1': string
+	'achievement-2': string
+	'achievement-3': string
+	'achievement-4': string
+	stack: string
+	team: string
+	'education-place': string
+	'education-specialty-ru': string
+	'education-specialty-en': string
+	name: string
+	title: string
+	'specialization-strong': string
+	'specialization-text': string
+}
+
+export const translations: Record<'ru' | 'en', TranslationKeys> = {
 	ru: {
 		home: 'Главная',
 		about: 'Специализация',
@@ -113,6 +157,7 @@ export const translations = {
 		team: 'Team',
 
 		'education-place': 'Civil Defence Academy',
+		'education-specialty-ru': 'Bachelor of Science in Information Systems',
 		'education-specialty-en': 'Bachelor of Science in Information Systems',
 		name: 'Alexander Kazantsev',
 		title: 'Fullstack Developer (Next.js/Nest.js)',

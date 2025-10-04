@@ -1,6 +1,12 @@
+import React from 'react'
 import styles from './ContactModal.module.css'
 
-const ContactModal = ({ isOpen, onClose }) => {
+interface ContactModalProps {
+	isOpen: boolean
+	onClose: () => void
+}
+
+const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
 	if (!isOpen) return null
 
 	return (
