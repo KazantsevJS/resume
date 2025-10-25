@@ -1,0 +1,291 @@
+/* Experience.module.css */
+.section {
+	margin-bottom: 16px;
+	scroll-margin-top: 70px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.section__title {
+	font-size: 1.5rem;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	color: #333;
+}
+
+.card {
+	background: var(--bg-gradient);
+	border: 1px solid var(--border-color);
+	border-radius: 14px;
+	padding: 16px;
+	transition: all 150ms ease;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	margin-bottom: 20px;
+}
+
+.card:last-child {
+	margin-bottom: 0;
+}
+
+.card:hover {
+	border-color: var(--border-hover);
+	box-shadow: var(--shadow), 0 0 0 6px var(--ring);
+}
+
+.card__content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.experience__item {
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.company__row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 8px;
+	gap: 16px;
+}
+
+.company {
+	font-weight: 600;
+	font-size: 20px;
+	color: var(--text);
+	margin: 0;
+	flex-shrink: 0;
+}
+
+.period {
+	color: var(--accent);
+	font-size: 20px;
+	font-weight: 500;
+	margin: 0;
+	white-space: nowrap;
+	flex-shrink: 0;
+}
+
+.role {
+	color: var(--accent-2);
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 8px;
+}
+
+.description {
+	font-size: 18px;
+	color: var(--muted);
+	margin: 0;
+}
+
+.description ul {
+	padding-left: 16px;
+	font-size: 18px;
+	color: var(--muted);
+	margin: 6px 0;
+}
+
+.description li {
+	margin-bottom: 4px;
+	position: relative;
+	padding-left: 1em;
+}
+
+.description li::before {
+	content: '•';
+	color: var(--accent);
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+	position: absolute;
+	left: 0;
+}
+
+.divider {
+	height: 1px;
+	background: var(--divider-color);
+	margin: 8px 0;
+}
+
+.description strong {
+	color: var(--text);
+	font-weight: 600;
+}
+
+.project__stack {
+	color: var(--muted);
+	font-size: 18px;
+	margin: 8px 0 0 0;
+}
+
+.project__stack:last-child {
+	margin-bottom: 0;
+}
+
+.project__stack strong {
+	color: var(--text);
+	font-weight: 600;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.stack__section {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.stack__items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.stack__items:not(:first-child) {
+	margin-top: 8px;
+	padding-top: 8px;
+	border-top: 1px solid var(--divider-color);
+}
+
+.stack__item {
+	display: inline-block;
+	background: var(--skill-bg);
+	color: var(--accent);
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.team__section {
+	color: var(--muted);
+	font-size: 18px;
+	margin: 8px 0 0 0;
+}
+
+.team__section strong {
+	color: var(--text);
+	font-weight: 600;
+}
+
+.team__composition {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	margin-top: 4px;
+}
+
+.team__member {
+	display: inline-block;
+	white-space: nowrap;
+	background: var(--skill-bg);
+	color: var(--accent);
+	padding: 2px 6px;
+	border-radius: 4px;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+@media (max-width: 768px) {
+	.section {
+		margin-bottom: 12px;
+		scroll-margin-top: 60px;
+		height: auto;
+	}
+
+	.card {
+		padding: 12px;
+		height: auto;
+		flex: none;
+		margin-bottom: 16px;
+	}
+
+	.company__row {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.company {
+		font-size: 18px;
+		flex-shrink: 1;
+	}
+
+	.period {
+		font-size: 16px;
+	}
+
+	.role {
+		font-size: 16px;
+		margin-bottom: 6px;
+	}
+
+	.experience__item {
+		font-size: 16px;
+	}
+
+	.description,
+	.description ul {
+		font-size: 16px;
+	}
+
+	.project__stack {
+		font-size: 14px;
+	}
+
+	.stack__items {
+		gap: 3px;
+	}
+
+	.stack__item {
+		font-size: 14px;
+		padding: 1px 4px;
+	}
+
+	.team__section {
+		font-size: 14px;
+	}
+
+	.team__member {
+		font-size: 14px;
+		padding: 1px 4px;
+	}
+
+	.team__composition {
+		gap: 4px;
+	}
+}
+
+@media (max-width: 480px) {
+	.company__row {
+		flex-wrap: nowrap;
+	}
+
+	.company {
+		font-size: 16px;
+	}
+
+	.period {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 360px) {
+	.company {
+		font-size: 15px;
+	}
+
+	.period {
+		font-size: 13px;
+	}
+}
