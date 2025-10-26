@@ -16,16 +16,19 @@ interface VercelResponse extends ServerResponse {
 
 async function getLocationByIp(ip: string): Promise<string> {
 	try {
-		const response = await fetch(`http://ipapi.co/${ip}/json/`)
+		// Используем надежный ip-api.com вместо ipapi.co
+		const response = await fetch(
+			`http://ip-api.com/json/${ip}?fields=status,message,country,regionName,city`
+		)
 		const data = await response.json()
 
-		if (data.error) {
+		if (data.status === 'fail') {
 			return 'не удалось определить местоположение'
 		}
 
 		const city = data.city || 'Город не определен'
-		const country = data.country_name || 'Страна не определена'
-		const region = data.region || ''
+		const country = data.country || 'Страна не определена'
+		const region = data.regionName || ''
 
 		return `${city}${region ? `, ${region}` : ''}, ${country}`
 	} catch (error) {
