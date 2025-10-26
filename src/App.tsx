@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useReactToPrint } from 'react-to-print'
 import ContactModal from './components/ContactModal/ContactModal'
 import Experience from './components/Experience/Experience'
@@ -15,6 +15,20 @@ const App: React.FC = () => {
 	const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
 
 	const printRef = useRef<HTMLDivElement>(null)
+
+	useEffect(() => {
+		const logVisit = async () => {
+			try {
+				const response = await fetch('/api/log-visit')
+				const data = await response.json()
+				console.log('Visit logged successfully:', data)
+			} catch (error) {
+				console.error('Failed to log visit:', error)
+			}
+		}
+
+		logVisit()
+	}, [])
 
 	const switchLanguage = (lang: Language): void => {
 		setLanguage(lang)
