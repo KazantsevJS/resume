@@ -15,7 +15,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
         <button className={styles.closeModal} onClick={onClose}>
           &times;
         </button>
-        <a href="https://t.me/KazantsevJS" className={styles.modalContactItem}>
+        <a href="https://t.me/alex_pauzhetsky" className={styles.modalContactItem}>
           <span className={styles.itemTitle}>Telegram</span>
         </a>
         <a href="https://wa.me/79960302435" className={styles.modalContactItem}>
